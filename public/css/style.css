@@ -1,0 +1,54 @@
+body {
+    background: dodgerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box {
+    border: 1px solid white;
+    width: 50%;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.head {
+    text-align: center;
+    text-transform: uppercase;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.to-do-form input {
+    width: 83%;
+}
+
+.list {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.list .data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 2px solid dodgerblue;
+    border-radius: 0.5rem;
+}
+
+.list lord-icon {
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+}
