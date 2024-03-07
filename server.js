@@ -1,12 +1,13 @@
+require("dotenv").config();
 // Imports
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const Mongoose = require("mongoose");
+const mongoose = require("mongoose");
 const router = require("./routes/routes");
 
 // Port
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Middleware
 // --static
@@ -19,7 +20,10 @@ app.set("view engine", "ejs");
 app.use(router);
 
 // Create DataBase
-Mongoose.connect("mongodb://localhost:27017/to-do-list")
+mongoose
+  .connect(
+    `mongodb+srv://puneetjangid637:${process.env.MONGO_PASS}@cluster0.h74zzsv.mongodb.net/to-do-list`
+  )
   .then(() => {
     console.log("Connected to DataBase");
     // Create Server
